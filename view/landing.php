@@ -1,6 +1,14 @@
 <?php require('partials/_header.php') ?>
+<?php require_once('./html_helper.php') ?>
+<?php require_once('../model/catalogue_helper.php') ?>
 
-<section class="card">
+
+<?php
+    $catalogue = get_catalogue_data();
+    render_catalogue($catalogue);
+?>
+
+<!-- <section class="card">
     <div class="form">
         <p style="background-color: #000; color: #fff; padding: 10px;">FILTRER PAR</p>
         <div class="form1">
@@ -40,13 +48,7 @@
                 <p>TATOO MOBILE<BR>Groupe de 4 casserole</p>
             </div>
         </div>
-        <div class="cardView">
-            <img src="./media/casserole2.png" alt="Avatar1" style="width:100%">
-            <div class="container">
-                <h4><b>14£</b></h4>
-                <p>Casserole L<BR>Une casserole en inox</p>
-            </div>
-        </div>
+        
         <div class="cardView">
             <img src="./media/casserole3.jpg" alt="Avatar1" style="width:100%">
             <div class="container">
@@ -141,6 +143,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php require('partials/_footer.php') ?>
