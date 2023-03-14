@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+}
+p{
+    font-size: 2rem;
+
+}
+h1
+{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+li
+{
+    font-size: 2rem;
+
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+/*Un peu de style à notre menu*/
+.menu{
+    /* background:#0a2b19 ; */
+    background:#28b463;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+}
+nav{
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+#nomSite
+{
+    flex: 1 1 40rem;
+}
+@media screen and (max-width: 885px)
+{
+    nav{
+        text-align: center;
+    }
+    #nomSite
+    {
+        padding: 2rem;
+    }
+    .Produits
+    {
+        width: 100%;
+        padding: 0;
+    }
+    table{
+        width: 60%;
+        padding: 0;
+        font-size: 15px;
+        
+
+    }
+    h3{
+    
+         margin-top: 20rem;
+    }
+}
+/*Un peu de style à notre footer*/
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#28b463 ;
+    height: auto;
+     width: 100%;
+     color: #fff;
+     padding-top: 10px;
+     position: fixed;
+}
+.footer-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+/*Mettons en forme la page politique*/
+
+.politique
+{
+    text-align: justify;
+}
+h3{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2.5rem;
+    margin-top: 2.7rem; ;
+}
+/*Mettons du style à notre tableau*/
+.Produits
+{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.table_commande
+{
+    padding: 10px;
+    width: 100%;
+    font-size: 1.5rem;
+    border: 1px solid;
+    border-collapse: separate;
+    margin: 1rem;
+}
+.table_commande th {
+    background-color:rgb(213, 216, 41);
+    color:#c00;
+  }
+  .table_commande th, td{
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+
+/*place au design de notre cardView*/
+.row1
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 2 1 40rem;
+    
+}
+.form
+{
+    flex: 1 1 2rem;
+    line-height: 4em; 
+    border: #000 solid;
+    margin-top: 80px;
+    margin-left: 10px;
+    padding: 5px;
+    
+}
+.cardView {
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s;
+ margin-top: 80px;
+}
+.form1
+{
+    padding: 0 0 0 4rem;
+}
+option
+{
+    padding: 0 0 0 2rem;
+}
+.cardView:hover {
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+.card
+{
+    
+    display: flex;
+    
+}
+.cardView ul 
+{
+    list-style: none;
+}
+.container
+{
+    background-color: yellowgreen;
+    color: #fff;
+    padding: 10px;
+}
+h4
+{
+    font-size: 18px;
+}
+/*encore un peu de style a notre page d'aide*/
+.politique_body
+{
+    text-align: justify;
+    line-height: 30px;
+
+}
+.politique_body h2
+{
+    text-align: center;
+    font-size: 3rem;
+    margin: 15px;
+    font-weight: bold;
+}
+.politique_body div p
+{
+    margin: 30px;
+}
+.text
+{
+    margin: 30px;
+}
+ol{
+    margin: 10px;
+    font-weight: bold;
+}
