@@ -1,7 +1,7 @@
 <?php require("partials/_header.php") ?>
 
 <section class="politique text-justify">
-    <h3 style="margin-top: 16rem;">Respect de la vie privée et confidentialité</h3>
+    <h3>Respect de la vie privée et confidentialité</h3>
     <p>
         Ci-après denommée la société KamgaShop respecte et assure la confidentialité des données personnelles que vous communiquez à la société
     </p>

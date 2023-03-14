@@ -36,6 +36,7 @@ a{
     background:#28b463;
     color: #fff;
     position: fixed;
+    /* position: absolute; */
     width: 100%;
 }
 nav{
@@ -92,10 +93,10 @@ footer{
     right: 0;
     background:#28b463 ;
     height: auto;
-     width: 100%;
-     color: #fff;
-     padding-top: 10px;
-     position: fixed;
+    width: 100%;
+    color: #fff;
+    padding-top: 10px;
+    position: fixed;
 }
 .footer-content
 {

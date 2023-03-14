@@ -2,9 +2,9 @@
         </div>
         <footer>
         <div class="footer-content">
-            <h2>Kamga'Shop</h2> 
+            <h2>KAMGA'Shop</h2> 
             <p>
-                copyright &copy;2022 <a href="./landing.php">Kamga Shop</a>
+                copyright &copy;2022 <a href="./landing.php">KAMGA'Shop</a>
             </p>
             <p>
                 <a href="./politique.php">Politique d'utilisation et de confidentialité</a>
