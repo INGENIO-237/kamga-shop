@@ -4,6 +4,7 @@
 
 
 <?php
+    session_start();
     render_header();
     $catalogue = get_catalogue_data();
     render_catalogue($catalogue);

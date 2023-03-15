@@ -14,11 +14,11 @@ function render_header()
         </head>
         <body>
         ");
-    echo"<header class='menu'>";        
-            
-    require('partials/_navbar.php');
-    render_navbar();
+    if(!str_contains($_SERVER["SCRIPT_FILENAME"], "login.php")){
+        echo"<header class='menu'>"; 
+        require('partials/_navbar.php');
+        render_navbar();
+        echo("</header>");
+    }
     
-    echo("</header>
-    <div style='padding: 100px; margin-bottom: 100px;'>");
 }
