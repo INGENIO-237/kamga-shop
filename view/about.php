@@ -1,4 +1,7 @@
-<?php require("partials/_header.php"); ?>
+<?php 
+    require("partials/_header.php"); 
+    render_header();
+?>
 <h1>
     KAMGA SHOP
 </h1>
@@ -27,4 +30,7 @@
         </tr>
     </table>
 </div>
-<?php require("partials/_footer.php"); ?>
+<?php 
+    require("partials/_footer.php");
+    render_footer();    
+?>

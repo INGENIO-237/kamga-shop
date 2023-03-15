@@ -1,5 +1,11 @@
 <?php
-  header('Location: view/landing.php');
+
+  session_start();
+  if(isset($_SESSION['user'])){
+    header('Location: view/landing.php');
+  }else{
+    header('Location: view/login.php');
+  }
   exit;
 ?>
     

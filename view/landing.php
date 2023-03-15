@@ -4,6 +4,7 @@
 
 
 <?php
+    render_header();
     $catalogue = get_catalogue_data();
     render_catalogue($catalogue);
 ?>
@@ -145,4 +146,7 @@
     </div>
 </section> -->
 
-<?php require('partials/_footer.php') ?>
+<?php 
+    require('partials/_footer.php'); 
+    render_footer();
+?>
