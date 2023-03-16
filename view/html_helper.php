@@ -36,7 +36,8 @@ function render_catalogue($catalogue){
 }
 
 
-function render_card($produc){
+function render_card($products){
+    $total = 0;
     echo "<section class='Produits'>
 <div style='margin:2.5rem;'>
     <h1 style='text-align: center; margin: 2.5rem; font-size: 30px;'>VOTRE PANIER</h1>
@@ -46,7 +47,7 @@ function render_card($produc){
     <input type='submit' value='Rechercher' style='border-radius: 10px; padding: 10px; background-color: blue; color: #fff; border: 0px;'>
   </form> 
   
-<form action='' method='post'>
+<form action='../controller/discard.php' method='post'>
 <table  style='margin-bottom: 100px;' class='table_commande table'>
     
         <tr>
@@ -54,38 +55,27 @@ function render_card($produc){
             <th>Prix</th>
             <th>Quantité</th>
             <th>Sous-total</th>
-        </tr>
+        </tr>";
+    
+    for($i=0; $i < count($products); $i++){
+        $total += (int)$products[$i]['qtity']*(int)$products[$i]['prix'];
+        echo"
         <tr>
-            <td style='color: hotpink;'>TATOO mobile</td>
-            <td style='color: blue;'>150£</td>
-            <td style='color: hotpink;'>2</td>
-            <td style='color: blue;'>300£</td>
+            <td style='color: hotpink;'>". $products[$i]['nom'] ."</td>
+            <td style='color: blue;'>". $products[$i]['prix'] ."</td>
+            <td style='color: hotpink;'>". $products[$i]['qtity'] ."</td>
+            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i]['prix'] ."</td>
         </tr>
-        <tr>
-          <td style='color: hotpink;'>Téléphone Blabla</td>
-          <td style='color: blue;'>90£</td>
-          <td style='color: hotpink;'>2</td>
-          <td style='color: blue;'>180£</td>
-      </tr>
-      <tr>
-          <td style='color: hotpink;'>Internet Beaucoup</td>
-          <td style='color: blue;'>14£</td>
-          <td style='color: hotpink;'>1</td>
-          <td style='color: blue;'>14£</td>
-      </tr>
-      <tr >
-          <td style='color: hotpink;'>Internet Passionnémént</td>
-          <td style='color: blue;'>12£</td>
-          <td style='color: hotpink;'>1</td>
-          <td style='color: blue;'>12£</td>
-      </tr>
-      <tr>
+        ";
+    }
+
+
+    echo"<tr>
           <th>Total à payer</th>
           <th colspan='2'></th>
-          <th style='color: blue;'>506£</th>
+          <th style='color: blue;'>". $total ."</th>
       </tr>
 </table>
-
 <button type='submit' name='checkout' class='btn btn-primary col-md-12'>Payer</button>
 </form>
 </div>

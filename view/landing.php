@@ -11,7 +11,6 @@ require_once('./html_helper.php');
     
     $catalogue = get_catalogue_data();
     render_catalogue($catalogue);
-    var_dump($_SESSION['user_card']);
  
     render_footer();
 ?>

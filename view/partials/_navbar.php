@@ -12,7 +12,7 @@ function render_navbar(){
         if(isset($_SESSION['user'])){
             echo "
             <li style='margin-left:20px'> Hello, ". $_SESSION['user']['login'] ."</li>
-            <a href='' class='btn btn-danger p-3'>Se deconnecter</a>
+            <a href='../controller/logout.php' class='btn btn-danger p-3'>Se deconnecter</a>
             ";
         }
     echo"</ul>
