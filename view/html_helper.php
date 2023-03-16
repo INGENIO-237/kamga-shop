@@ -36,7 +36,7 @@ function render_catalogue($catalogue){
 }
 
 
-function render_card(){
+function render_card($produc){
     echo "<section class='Produits'>
 <div style='margin:2.5rem;'>
     <h1 style='text-align: center; margin: 2.5rem; font-size: 30px;'>VOTRE PANIER</h1>
