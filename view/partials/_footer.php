@@ -3,7 +3,7 @@
 function render_footer(){
     echo("    
     </div>
-    <footer>
+    <footer class='fixed-bottom'>
     <div class='footer-content'>
         <h2>KAMGA'Shop</h2> 
         <p>

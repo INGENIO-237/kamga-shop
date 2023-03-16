@@ -1,30 +1,37 @@
-<?php require("partials/_header.php") ?>
+<?php
+require('partials/_header.php');
+render_header();
+?>
 
-<section class="politique text-justify">
+<?php
+
+function render_politique()
+{
+    echo "<section class='politique text-justify'>
     <h3>Respect de la vie privée et confidentialité</h3>
     <p>
         Ci-après denommée la société KamgaShop respecte et assure la confidentialité des données personnelles que vous communiquez à la société
     </p>
     <p>
-        Lors de vos contacts avec le société certaines données vous concernant sont collectées et traitées. Etant donné que ces données permettet de vous identifier en tant que personne, il d'agit de "données à caractère personnel"
+        Lors de vos contacts avec le société certaines données vous concernant sont collectées et traitées. Etant donné que ces données permettet de vous identifier en tant que personne, il d'agit de 'données à caractère personnel'
     </p>
     <p>
         Pour savoir quelles sont les données personnelles traitées par la société et dans quelle mesure la société les utilise de manière adéquate, vou pouvez consulter les rubriques suivantes:
     </p>
     <p>
-    <ol style="padding: 0 0 0 5rem ; margin-bottom: 20rem;">
-        <li><a href="#politique" style="color: #000;">La presente déclaration et politique de respect de la ie privée </a></li>
-        <li><a href="#Données" style="color: #000;">Données à caractère personnel detenues par la société </a></li>
-        <li><a href="#Traitement" style="color: #000;">Traitement des données à caractère personnel par la société </a></li>
-        <li><a href="#Partage" style="color: #000;">Partage des données à caractère personnel par la société </a></li>
-        <li><a href="#droits" style="color: #000;">Vos droits </a></li>
-        <li><a href="#Sécurisation" style="color: #000;">politique de sécurité de la société </a></li>
+    <ol style='padding: 0 0 0 5rem ; margin-bottom: 20rem;'>
+        <li><a href='#politique' style='color: #000;'>La presente déclaration et politique de respect de la ie privée </a></li>
+        <li><a href='#Données' style='color: #000;'>Données à caractère personnel detenues par la société </a></li>
+        <li><a href='#Traitement' style='color: #000;'>Traitement des données à caractère personnel par la société </a></li>
+        <li><a href='#Partage' style='color: #000;'>Partage des données à caractère personnel par la société </a></li>
+        <li><a href='#droits' style='color: #000;'>Vos droits </a></li>
+        <li><a href='#Sécurisation' style='color: #000;'>politique de sécurité de la société </a></li>
         </p>
-
+    </ol>
 </section>
-<div class="text text-justify">
+<div class='text text-justify'>
 
-    <div id="politique">
+    <div id='politique'>
         <h2>
             La présente déclaration et politique de respect de la vie privée
 
@@ -36,7 +43,7 @@
 
         </p>
     </div>
-    <div id="Données">
+    <div id='Données'>
         <h2>
             Données à caractère personnel détenues par la société
         </h2>
@@ -69,7 +76,7 @@
         </ul>
         </p>
     </div>
-    <div id="Traitement">
+    <div id='Traitement'>
         <h2>
             Traitement des données à caractère personnel par la société
 
@@ -94,7 +101,7 @@
         </p>
     </div>
 
-    <div id="Partage">
+    <div id='Partage'>
         <h2>
             Partage des données à caractère personnel par la société
 
@@ -103,7 +110,7 @@
             La société peut échanger les données à caractère personnel traitées avec les sociétés mères et sœurs et les filiales au sein du groupe. En outre, des données à caractère personnel peuvent également être partagées avec des partenaires, fournisseurs ou autres préposés de la société lorsque le traitement par ces tiers est nécessaire pour la conclusion, l’exécution, l’utilisation, l’achat, l’accès ou le traitement de produits et services et de sites Internet, applications, boutiques en ligne (mobiles)… Les conventions requises sont toujours conclues avec ces partenaires, fournisseurs ou autres préposés afin de limiter l’utilisation et le traitement de vos données personnelles et de garantir une protection suffisante de celles-ci. Si votre autorisation est légalement requise ou si nous estimons que votre autorisation est appropriée compte tenu des circonstances, nous vous la demanderons toujours avant de partager vos données personnelles ou de les transmettre à un pays situé en dehors de l’Espace économique européen. Vos données personnelles sont exclusivement divulguées conformément à la présente déclaration et politique de respect de la vie privée et/ou si la loi l’exige. Nos partenaires, fournisseurs ou autres préposés peuvent uniquement utiliser vos données personnelles pour vous communiquer des offres, des bulletins d’information et d’autres informations commerciales. Si vous ne souhaitez plus recevoir ce type d’informations, vous pouvez à tout moment contacter ces tiers pour mettre fin à l’utilisation de vos données personnelles (voir le point 8 de la présente déclaration et politique de respect de la vie privée). Enfin, les données à caractère personnel peuvent toujours être rendues anonymes avant d’être partagées avec des tiers. Dans ce cas, vous ne pourrez jamais être identifié(e) grâce à l’anonymisation de vos données personnelles.
         </p>
     </div>
-    <div id="droits">
+    <div id='droits'>
         <h2>
             Vos droits
         </h2>
@@ -111,7 +118,7 @@
             Vous avez à tout moment le droit de consulter et de corriger vos données personnelles traitées par la société. Vous avez également le droit de supprimer vos données personnelles et d’en limiter l’utilisation et la transférabilité dans la mesure où la réglementation applicable le prévoit.Vous pouvez à tout moment annuler votre autorisation pour certains traitements de vos données et vous opposer à l’utilisation de vos données personnelles à des fins de marketing direct, à la transmission de vos données personnelles à des tiers (lorsque cette transmission n’est pas indispensable pour les prestations de services de la société) et à l’établissement de votre profil. Vous pouvez contacter la société à cet effet aux coordonnées reprises au point 8 de la présente déclaration et politique de respect de la vie privée. Vous avez également le droit de porter plainte auprès de l’autorité de contrôle.
         </p>
     </div>
-    <div id="Sécurisation">
+    <div id='Sécurisation'>
         <h2>
             Sécurisation des données
 
@@ -131,6 +138,14 @@
         </p>
         </p>
     </div>
-</div>
+</div>";
+}
 
-<?php require("partials/_footer.php") ?>
+render_politique();
+
+?>
+
+<?php
+require('partials/_footer.php');
+render_footer();
+?>

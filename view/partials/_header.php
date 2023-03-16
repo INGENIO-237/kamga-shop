@@ -20,5 +20,6 @@ function render_header()
         render_navbar();
         echo("</header>");
     }
+    echo"<div class='container'";
     
 }
