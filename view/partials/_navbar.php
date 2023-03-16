@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 function render_navbar(){
     echo("<nav class='menu navbar fixed-top'>

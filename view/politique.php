@@ -1,9 +1,9 @@
 <?php
+session_start();
 require('partials/_header.php');
+require('partials/_footer.php');
 render_header();
-?>
 
-<?php
 
 function render_politique()
 {
@@ -143,9 +143,5 @@ function render_politique()
 
 render_politique();
 
-?>
-
-<?php
-require('partials/_footer.php');
 render_footer();
 ?>
