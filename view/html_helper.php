@@ -11,20 +11,17 @@ function render_catalogue($catalogue){
             <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='". $catalogue[$i]['image'] ."'/>
 
             <div class='card-body'>
-                <form method='post' action=''>
+                <form method='post' action='../controller/card.php'>
                     <p class='card-text' name='p_nom'>". $catalogue[$i]['nom'] ."</p>
                     <p class='card-text' name='p_prix'>". $catalogue[$i]['prix'] ."€</p>
                     <div class='row d-flex justify-content-between align-items-center'>
-                        <div class='col-sm-4'>
-                            <input type='number' class='form-control' min='0' value=". $i ." hidden name='id'>
-                            <input type='text' class='form-control' min='0' value=". $catalogue[$i]['nom'] ." hidden name='nom_". $i .">
-                            <input type='number' class='form-control' min='0' value=". $catalogue[$i]['prix'] ." hidden name='prix_". $i .">
-                            <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i .">
+                        <div class='col-sm-6'>
+                            <input type='number' class='form-control' min='0' value='". $i ."' hidden name='id'>
+                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $catalogue[$i]['nom'] ."'>
+                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $catalogue[$i]['prix'] ."'>
+                            <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i ."'>
                         </div>
-                        <div class='col-sm-4'>
-                            <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i .">
-                        </div>
-                        <div class='col-sm-4'>
+                        <div class='col-sm-6'>
                             <button class='btn btn-success' type='submit'>Ajouter</button>
                         </div>
                     </div>
