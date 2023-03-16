@@ -24,7 +24,7 @@ function render_login()
 
     <div class='checkbox mb-3'>
       <label>
-        <input type='checkbox' value='remember-me'> Se rappeler de moi
+        <input type='checkbox' value='remember-me' name='remember-me'> Se rappeler de moi
       </label>
     </div>
     <button class='w-100 btn btn-lg btn-primary' type='submit'>Connexion</button>

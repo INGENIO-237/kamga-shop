@@ -10,6 +10,10 @@
         if($user != false){
             session_start();
             $_SESSION["user"] = $user;
+            if($_POST['remember-me'] == true){
+                setcookie("user_login", $login, time()+60*60*24*30, domain:$_SERVER['SERVER_ADDR']);
+                setcookie("user_pwd", $pwd, time()+60*60*24*30, domain:$_SERVER['SERVER_ADDR']);
+            }
             header("Location: ../view/landing.php");
         }
     }
