@@ -4,7 +4,6 @@ function render_catalogue($catalogue){
     $i = 0;
     echo "<div class='album'>
     <div class='container'>
-    <h1>CATALOGUE</h1>
     <div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>";
     foreach($catalogue as $product){        
         echo "<div class='col'>
@@ -41,16 +40,16 @@ function render_catalogue($catalogue){
 function render_card($products){
     $total = 0;
     echo "<section class='Produits'>
-<div style='margin:2.5rem;'>
-    <h1 style='text-align: center; margin: 2.5rem; font-size: 30px;'>VOTRE PANIER</h1>
-  
-  <form action='' style='float: right; margin-bottom: 10px;'>
-    <input type='search' placeholder='chercher....' style='height:35px; padding: 6px;'> 
-    <input type='submit' value='Rechercher' style='border-radius: 10px; padding: 10px; background-color: blue; color: #fff; border: 0px;'>
-  </form> 
-  
-<form action='../controller/discard.php' method='post'>
-<table  style='margin-bottom: 100px;' class='table_commande table'>
+    <div style='margin:2.5rem;'>
+        <h1 style='text-align: center; margin: 2.5rem; font-size: 30px;'>VOTRE PANIER</h1>
+    
+    <form action='' style='float: right; margin-bottom: 10px;'>
+        <input type='search' placeholder='chercher....' style='height:35px; padding: 6px;'> 
+        <input type='submit' value='Rechercher' style='border-radius: 10px; padding: 10px; background-color: blue; color: #fff; border: 0px;'>
+    </form> 
+    
+    <form action='../controller/discard.php' method='post'>
+    <table  style='margin-bottom: 100px;' class='table_commande table'>
     
         <tr>
             <th>Formule</th>
@@ -60,13 +59,13 @@ function render_card($products){
         </tr>";
     
     for($i=0; $i < count($products); $i++){
-        $total += (int)$products[$i]['qtity']*(int)$products[$i];
+        $total += (int)$products[$i]['qtity']*(int)$products[$i]['prix'];
         echo"
         <tr>
-            <td style='color: hotpink;'>". $products[$i] ."</td>
-            <td style='color: blue;'>". $products[$i] ."</td>
+            <td style='color: hotpink;'>". $products[$i]['nom'] ."</td>
+            <td style='color: blue;'>". $products[$i]['prix'] ."</td>
             <td style='color: hotpink;'>". $products[$i]['qtity'] ."</td>
-            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i] ."</td>
+            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i]['prix'] ."</td>
         </tr>
         ";
     }
