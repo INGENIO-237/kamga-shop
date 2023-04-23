@@ -8,17 +8,17 @@ function render_catalogue($catalogue){
     for($i = 0; $i < count($catalogue); $i++){
         echo "<div class='col'>
           <div class='card shadow-sm'>
-            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='". $catalogue[$i]['image'] ."'/>
+            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='". $catalogue[$i]['image_pro'] ."'/>
 
             <div class='card-body'>
                 <form method='post' action='../controller/card.php'>
-                    <p class='card-text' name='p_nom'>". $catalogue[$i]['nom'] ."</p>
-                    <p class='card-text' name='p_prix'>". $catalogue[$i]['prix'] ."€</p>
+                    <p class='card-text' name='p_nom'>". $catalogue[$i]['nom_pro'] ."</p>
+                    <p class='card-text' name='p_prix'>". $catalogue[$i]['prix_pro'] ."€</p>
                     <div class='row d-flex justify-content-between align-items-center'>
                         <div class='col-sm-6'>
                             <input type='number' class='form-control' min='0' value='". $i ."' hidden name='id'>
-                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $catalogue[$i]['nom'] ."'>
-                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $catalogue[$i]['prix'] ."'>
+                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $catalogue[$i]['nom_pro'] ."'>
+                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $catalogue[$i]['prix_pro'] ."'>
                             <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i ."'>
                         </div>
                         <div class='col-sm-6'>
@@ -58,13 +58,13 @@ function render_card($products){
         </tr>";
     
     for($i=0; $i < count($products); $i++){
-        $total += (int)$products[$i]['qtity']*(int)$products[$i]['prix'];
+        $total += (int)$products[$i]['qtity']*(int)$products[$i]['prix_pro'];
         echo"
         <tr>
-            <td style='color: hotpink;'>". $products[$i]['nom'] ."</td>
-            <td style='color: blue;'>". $products[$i]['prix'] ."</td>
+            <td style='color: hotpink;'>". $products[$i]['nom_pro'] ."</td>
+            <td style='color: blue;'>". $products[$i]['prix_pro'] ."</td>
             <td style='color: hotpink;'>". $products[$i]['qtity'] ."</td>
-            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i]['prix'] ."</td>
+            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i]['prix_pro'] ."</td>
         </tr>
         ";
     }
