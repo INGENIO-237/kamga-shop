@@ -8,7 +8,7 @@ function render_catalogue($catalogue){
     foreach($catalogue as $product){        
         echo "<div class='col'>
           <div class='card shadow-sm'>
-            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src=''/>
+            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='./media/casserole". $i+1 .".jpg'/>
 
             <div class='card-body'>
                 <form method='post' action='../controller/card.php'>
@@ -87,11 +87,60 @@ function render_card($products){
 function render_about(){
     echo "<div style='padding-top: 150px;padding-top: 100px;'>
     <h1>
-    KAMGA SHOP
-</h1>
-<p>
-    Kamga'Shop est la réference en terme de produit de qualité et moins chers. Venez découvrir un univers commercial sans pareil
-</p>
+        KAMGA SHOP
+    </h1><br><br>
+    <p>
+    Bienvenue sur notre site de e-commerce ! Voici une brève présentation de ce qui est implanté sur notre site et de ce qui ne l'est pas.<br><br>
+
+    Ce qui est implanté :<br>
+    
+    
+        Un panier d'achat pour vous permettre de sélectionner les produits que vous souhaitez acheter.<br>
+    
+        Un formulaire de commande qui vous permet de saisir vos informations de livraison et de paiement.<br>
+    
+        Une recherche par mots-clés pour vous aider à trouver rapidement les produits que vous cherchez.<br>
+    
+        Une liste de produits pour vous aider à naviguer facilement sur le site.<br>
+    
+        Des images et des descriptions détaillées de chaque produit pour vous aider à prendre une décision d'achat éclairée.<br>
+    
+        Des informations claires sur les politiques d'utilisation et de confidentialité.<br><br>
+    
+    
+    Ce qui n'est pas implanté :<br>
+    
+    
+        Nous ne proposons pas de chat en direct avec un représentant du service clientèle.<br>
+    
+        Nous n'avons pas encore mis en place un système de commentaires et d'avis clients.<br><br>
+    
+    
+    Liens intéressants à cliquer :<br>
+    
+        La page d'accueil pour découvrir les dernières offres et promotions.<br><br>
+    
+    Mots-clés à utiliser dans l'outil de recherche :<br>
+    
+    
+        Le nom du produit ou de la marque que vous recherchez.<br>
+    
+        Le numéro de référence si vous avez une référence spécifique en tête.<br>
+    
+        Les mots-clés associés à la fonction, la couleur, la taille, le matériau ou toute autre caractéristique du produit que vous cherchez.<br><br>
+    
+    
+    Login spéciaux éventuels :<br>
+    
+    
+        Si vous êtes un client professionnel, vous pouvez utiliser votre login professionnel pour accéder à des fonctionnalités et des offres spéciales réservées aux professionnels.<br>
+    
+        Si vous êtes un membre de notre programme de fidélité, vous pouvez utiliser votre login pour accéder à des avantages exclusifs et des offres personnalisées.<br><br>
+    
+    
+    Nous espérons que ces informations vous seront utiles. N'hésitez pas à nous contacter si vous avez des questions ou des commentaires
+    </p>
+
 <br><br>
 <div>
     <h2>Contact</h2>
