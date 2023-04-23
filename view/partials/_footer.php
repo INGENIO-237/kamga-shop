@@ -16,6 +16,7 @@ function render_footer(){
     </footer>
     <script src='js/bootstrap.js'></script>
     <script src='js/jquery.js'></script>
+    <script src='js/card.js'></script>
 </body>
 </html>");
 }
