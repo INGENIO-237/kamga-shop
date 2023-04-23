@@ -7,6 +7,7 @@ function render_navbar(){
         <li><a href='./landing.php'>ACCUEIL</a></li>
         <li><a href='./card.php'>PANIER</a></li>
         <li><a href='./about.php'>A PROPOS</a></li>
+        <li><a href='./sponsors.php'>SPONSORS</a></li>
         ");
         if(isset($_SESSION['user'])){
             echo "

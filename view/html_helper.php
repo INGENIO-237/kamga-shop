@@ -116,6 +116,23 @@ function render_about(){
 </div>
 ";
 }
+
+function render_sponsor($jsonData){
+    foreach($jsonData as $key=>$value){
+
+        echo("
+        <a href=". $value['link'] .">
+            <div class='card' style='width: 18rem; color: ". $value['color'] .";'>
+                <img src=". $value['image'] ." class='card-img-top' alt=". $value['image'] .">
+                <div class='card-body'>
+                    <h5 class='card-title'>". $value['link'] ."</h5>
+                    <p class='card-text text-justify'>". $value['text'] ."</p>
+                </div>
+            </div>
+        </a>
+        ");
+    }
+}
       
 
 ?>
