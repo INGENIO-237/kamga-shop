@@ -1,24 +1,25 @@
 <?php
 
 function render_catalogue($catalogue){
+    $i = 0;
     echo "<div class='album'>
     <div class='container'>
     <h1>CATALOGUE</h1>
     <div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>";
-    for($i = 0; $i < count($catalogue); $i++){
+    foreach($catalogue as $product){        
         echo "<div class='col'>
           <div class='card shadow-sm'>
-            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='". $catalogue[$i]['image_pro'] ."'/>
+            <img class='bd-placeholder-img card-img-top' width='100%' height='225' src=''/>
 
             <div class='card-body'>
                 <form method='post' action='../controller/card.php'>
-                    <p class='card-text' name='p_nom'>". $catalogue[$i]['nom_pro'] ."</p>
-                    <p class='card-text' name='p_prix'>". $catalogue[$i]['prix_pro'] ."€</p>
+                    <p class='card-text' name='p_nom'>". $product['nom_pro'] ."</p>
+                    <p class='card-text' name='p_prix'>". $product['prix_pro'] ."€</p>
                     <div class='row d-flex justify-content-between align-items-center'>
                         <div class='col-sm-6'>
                             <input type='number' class='form-control' min='0' value='". $i ."' hidden name='id'>
-                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $catalogue[$i]['nom_pro'] ."'>
-                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $catalogue[$i]['prix_pro'] ."'>
+                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $product['nom_pro'] ."'>
+                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $product['prix_pro'] ."'>
                             <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i ."'>
                         </div>
                         <div class='col-sm-6'>
@@ -29,6 +30,7 @@ function render_catalogue($catalogue){
             </div>
           </div>
         </div>";
+        $i += 1;
     }   
     echo "</div>
     </div>
@@ -58,13 +60,13 @@ function render_card($products){
         </tr>";
     
     for($i=0; $i < count($products); $i++){
-        $total += (int)$products[$i]['qtity']*(int)$products[$i]['prix_pro'];
+        $total += (int)$products[$i]['qtity']*(int)$products[$i];
         echo"
         <tr>
-            <td style='color: hotpink;'>". $products[$i]['nom_pro'] ."</td>
-            <td style='color: blue;'>". $products[$i]['prix_pro'] ."</td>
+            <td style='color: hotpink;'>". $products[$i] ."</td>
+            <td style='color: blue;'>". $products[$i] ."</td>
             <td style='color: hotpink;'>". $products[$i]['qtity'] ."</td>
-            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i]['prix_pro'] ."</td>
+            <td style='color: blue;'>". (int)$products[$i]['qtity']*(int)$products[$i] ."</td>
         </tr>
         ";
     }
@@ -118,15 +120,15 @@ function render_about(){
 }
 
 function render_sponsor($jsonData){
-    foreach($jsonData as $key=>$value){
+    foreach($jsonData as $key=>$product){
 
         echo("
-        <a href=". $value['link'] .">
-            <div class='card' style='width: 18rem; color: ". $value['color'] .";'>
-                <img src=". $value['image'] ." class='card-img-top' alt=". $value['image'] .">
+        <a href=". $product['link'] .">
+            <div class='card' style='width: 18rem; color: ". $product['color'] .";'>
+                <img src=". $product['image'] ." class='card-img-top' alt=". $product['image'] .">
                 <div class='card-body'>
-                    <h5 class='card-title'>". $value['link'] ."</h5>
-                    <p class='card-text text-justify'>". $value['text'] ."</p>
+                    <h5 class='card-title'>". $product['link'] ."</h5>
+                    <p class='card-text text-justify'>". $product['text'] ."</p>
                 </div>
             </div>
         </a>

@@ -10,7 +10,9 @@ require_once('./html_helper.php');
 
     
     $catalogue = get_catalogue_data();
-    // render_catalogue($catalogue);
+
+    // print_r($catalogue);
+    render_catalogue($catalogue);
  
     render_footer();
 ?>
