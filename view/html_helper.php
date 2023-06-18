@@ -11,21 +11,19 @@ function render_catalogue($catalogue){
             <img class='bd-placeholder-img card-img-top' width='100%' height='225' src='./media/casserole". $i+1 .".jpg'/>
 
             <div class='card-body'>
-                <form method='post' action='../controller/card.php'>
                     <p class='card-text' name='p_nom'>". $product['nom_pro'] ."</p>
                     <p class='card-text' name='p_prix'>". $product['prix_pro'] ."€</p>
                     <div class='row d-flex justify-content-between align-items-center'>
                         <div class='col-sm-6'>
                             <input type='number' class='form-control' min='0' value='". $i ."' hidden name='id'>
-                            <input type='text' class='form-control' min='0' hidden name='nom". $i ."' value='". $product['nom_pro'] ."'>
-                            <input type='number' class='form-control' min='0' hidden name='prix". $i ."' value='". $product['prix_pro'] ."'>
-                            <input type='number' class='form-control' min='0' value='0' width='10%' name='quantity". $i ."'>
+                            <input type='text' class='form-control' min='0' data-nom_pro = ". $product['nom_pro'] ." hidden id='nom". $i ."' value='". $product['nom_pro'] ."'>
+                            <input type='number' class='form-control' min='0' data-prix_pro = ". $product['prix_pro'] ." hidden id='prix". $i ."' value='". $product['prix_pro'] ."'>
+                            <input type='number' class='form-control' min=0 value=0 width='10%' id='quantity". $i ."'>
                         </div>
                         <div class='col-sm-6'>
-                            <button class='btn btn-success' type='submit'>Ajouter</button>
+                            <button class='btn btn-success' id='addToCart-' ". $i ." onclick='addToCart(". $i .")' >Ajouter</button>
                         </div>
                     </div>
-                </form>
             </div>
           </div>
         </div>";

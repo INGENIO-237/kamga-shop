@@ -11,6 +11,8 @@ function render_header()
             <link rel='stylesheet' href='css/bootstrap.css'>
             <link rel='stylesheet' href='css/main.css'>
             <title>Kamga Shop</title>
+
+            <script src='js/jquery.min.js'></script>
         </head>
         <body>
         ");

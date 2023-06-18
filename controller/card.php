@@ -1,17 +1,15 @@
 <?php
 if(isset($_POST) && !empty($_POST)){
     addToCard($_POST);
-    header("Location: ../view/landing.php");
 }
 
 // Add a product to the card
 function addToCard($vProduct){
     session_start();
-    $id = $vProduct["id"];
     $product = array(
-        "nom"=>$vProduct['nom'.$id],
-        "prix"=>$vProduct["prix".$id],
-        "qtity"=>$vProduct["quantity".$id]
+        "nom"=>$vProduct['name'],
+        "prix"=>$vProduct["price"],
+        "qtity"=>$vProduct["qty"]
     );
     // Add product to card
     if(!isset($_SESSION['user_card'])){
@@ -21,10 +19,12 @@ function addToCard($vProduct){
     // If so, increment. Else add to the card
     if(check_existence($_SESSION['user_card'], $product)){
         $position = get_position($_SESSION['user_card'], $product);
-        $_SESSION['user_card'][$position]['qtity'] += (int)$product["quantity".$id];
+        $_SESSION['user_card'][$position]['qtity'] = (int)$product["qtity"];
     }else{
         array_push($_SESSION['user_card'], $product);
     }
+
+    header("Location: ../view/landing.php");
 }
 
 // Check the existence a product in the card
