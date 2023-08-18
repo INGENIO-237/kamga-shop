@@ -1,0 +1,20 @@
+# KamgaShop
+
+## A propos
+
+L'application est structuré et suivant l'architecture de developpement MVC :
+
+### index.php
+Controller de base qui est éxécuté lorsque l'application est lancée
+
+### M: Model
+
+Représente les données et la logique métier de l’application. Il encapsule les données brutes et définit les composants essentiels de l’application2.
+
+### V: View
+
+Responsable de l’affichage des données à l’utilisateur et de la gestion des interactions avec celui-ci. Elle définit l’apparence visuelle de l’application et la façon dont l’utilisateur interagit avec elle2.
+
+### C: Controller
+
+Agit comme un intermédiaire entre Model et View. Il reçoit les entrées de l’utilisateur et décide quoi en faire. Il coordonne les actions entre View et Model.

@@ -9,6 +9,9 @@ require_once("../model/db.php");
 //     return $GLOBALS['login_a'];
 // }
 
+
+// Permet de connecter l'utilisateur
+// Returne l'utilisateur si présent, false le cas contraire
 function log_user_in($login, $pwd){
     
     // Old dummy data

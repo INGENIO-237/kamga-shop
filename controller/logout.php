@@ -1,4 +1,6 @@
 <?php
+
+// Deconnecte l'utilisateur
 session_start();
 session_destroy();
 

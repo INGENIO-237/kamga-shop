@@ -16,7 +16,7 @@
             }
             header("Location: ../view/landing.php");
         }else{
-            die("User not found");
+            die("Identifiant ou mot de passe incorrect");
         }
     }
 
