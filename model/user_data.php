@@ -1,5 +1,6 @@
 <?php
 
+// Dummy user database
 $GLOBALS['login_a'] = array(
     array("login" => "admin", "password" => "admin", "role" => "administrator"),
     array("login" => "Arthur", "password" => "King", "role" => "customer"),

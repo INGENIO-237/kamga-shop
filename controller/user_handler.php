@@ -15,6 +15,8 @@
                 setcookie("user_pwd", $pwd, time()+60*60*24*30, domain:$_SERVER['SERVER_ADDR']);
             }
             header("Location: ../view/landing.php");
+        }else{
+            die("Identifiant ou mot de passe incorrect");
         }
     }
 
