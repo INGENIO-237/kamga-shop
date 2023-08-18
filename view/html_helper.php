@@ -106,8 +106,9 @@ function render_about(){
         Des images et des descriptions détaillées de chaque produit pour vous aider à prendre une décision d'achat éclairée.<br>
     
         Des informations claires sur les politiques d'utilisation et de confidentialité.<br><br>
+
     
-    
+
     Ce qui n'est pas implanté :<br>
     
     
@@ -140,6 +141,27 @@ function render_about(){
     
     Nous espérons que ces informations vous seront utiles. N'hésitez pas à nous contacter si vous avez des questions ou des commentaires
     </p>
+    <br>
+    <br>
+
+    <h2>Livrable 1: Maquette du site interactif</h2>
+    <ul>
+        <li>Une page présentant le catalogue produit</li>
+        <li>Une page panie, contenat les produits sélectionnés pour l'achat</li>
+        <li>Une page à propos présentant le site</li>
+    </ul>
+    <br>
+        <h2>Livrable 2: Site interactif avec MVC</h2>
+        <p>
+            Création de l'architecture MVC (Model, View, Controller) ainsi que les differents fichiers et dossiers correspondants
+        </p>
+        <br>
+    <h2>Livrable 3: BD SQL et JSON</h2>
+    <p>Conversion de la BD statique en BD réelle MYSQL, Adaption du système d'authentification, ajout de la page sponsors et ajout de la fonction de recherche</p>
+    
+    <br>
+    <h2>Livrable 4: AJAX</h2>
+    <p>Ajout de la foctionnalité de gestion du panier avec ajax.</p>
 
 <br><br>
 <div>
